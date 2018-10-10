@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'calculatorAngular';
+  title = 'Welcome to calculatorAngular!';
 }
