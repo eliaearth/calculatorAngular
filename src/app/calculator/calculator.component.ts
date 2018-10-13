@@ -4,7 +4,7 @@ import { Operation } from '../Operation';
 declare const OPERATIONS;
 
 @Component({
-  selector: 'calculator',
+  selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css']
 })
