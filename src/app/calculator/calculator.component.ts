@@ -21,15 +21,15 @@ export class CalculatorComponent implements OnInit {
   selectedCalcList = [];
     
   constructor() {
-    console.log("constructor");
+    console.log('constructor');
   }
 
   ngOnInit() {
-    console.log("on init");
+    console.log('on init');
   }
 
   add(){
-    console.log("add click");
+    console.log('add click');
     this.selectedCalcList.push({
         name: this.selectedOp.name,
         value: this.selectedOp.value,
@@ -38,7 +38,7 @@ export class CalculatorComponent implements OnInit {
   }
   
   reset(){
-    console.log("reset click");
+    console.log('reset click');
     this.nr = 0;
     this.result = 0;
     this.selectedCalcList = [];
@@ -46,11 +46,11 @@ export class CalculatorComponent implements OnInit {
   }
   
   calculate = function(){
-    console.log("calculate click");
+    console.log('calculate click');
     let calcLength = this.selectedCalcList.length-1;
     this.result = this.selectedCalcList[calcLength].nr;
     for(let i=0; i<calcLength; i++){
-        let exp = this.result + "" + this.selectedCalcList[i].value + this.selectedCalcList[i].nr;
+        let exp = this.result + '' + this.selectedCalcList[i].value + this.selectedCalcList[i].nr;
         this.result = eval(exp);
     }
     return this.result;

@@ -7,7 +7,7 @@ describe('CalculatorComponent', () => {
   let fixture: ComponentFixture<CalculatorComponent>;
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ 
+      declarations: [
         CalculatorComponent 
       ],
       imports: [
@@ -31,8 +31,8 @@ describe('CalculatorComponent', () => {
     it('on reset all properties are refreshed', () => {
       component.nr = 22;
       component.result = 44;
-      component.selectedOp = {value:"opVal",name:"opName"};
-      component.selectedCalcList = [{value:"opVal",name:"opName", nr:"444"}];
+      component.selectedOp = {value:'opVal',name:'opName'};
+      component.selectedCalcList = [{value:'opVal',name:'opName', nr:'444'}];
       component.reset();
       expect(component.nr).toEqual(0);
       expect(component.result).toEqual(0);
@@ -43,7 +43,7 @@ describe('CalculatorComponent', () => {
 
   describe('Add', ()=>{
     it('on add the calculation list should have the new operation and number', () =>{
-      component.selectedOp = {name: "multiply", value:"*"};
+      component.selectedOp = {name: 'multiply', value:'*'};
       component.nr = 5;
       component.add();
       var calcLength = component.selectedCalcList.length;
@@ -52,11 +52,11 @@ describe('CalculatorComponent', () => {
   })
 
   describe('Calculate', ()=>{
-    it("(3 + 2) * 3 = 15", ()=>{
+    it('(3 + 2) * 3 = 15', ()=>{
       component.selectedCalcList = [
-            {name:"add", value:"+", nr:"2"},
-            {name:"multiply", value:"*", nr:"3"},
-            {name:"", value:"", nr:"3"}
+            {name:'add', value:'+', nr:'2'},
+            {name:'multiply', value:'*', nr:'3'},
+            {name:'', value:'', nr:'3'}
         ]
         component.calculate();
         expect(component.result).toEqual(15);
@@ -64,10 +64,10 @@ describe('CalculatorComponent', () => {
   });
 
   describe('Calculate', ()=>{
-    it("5 * 9 = 45", ()=>{
+    it('5 * 9 = 45', ()=>{
       component.selectedCalcList = [
-        {name:"multiply", value:"*", nr:"9"},
-        {name:"", value:"", nr:"5"},
+        {name:'multiply', value:'*', nr:'9'},
+        {name:'', value:'', nr:'5'},
       ]
         component.calculate();
         expect(component.result).toEqual(45);
@@ -75,9 +75,9 @@ describe('CalculatorComponent', () => {
   });
 
   describe('Calculate', ()=>{
-    it("apply 1 = 1", ()=>{
+    it('apply 1 = 1', ()=>{
       component.selectedCalcList = [
-        {name:"", value:"", nr:"1"}
+        {name:'', value:'', nr:'1'}
       ]
       expect(component.calculate()).toEqual('1');
     });
