@@ -22,14 +22,6 @@ export class CalculatorComponent implements OnInit {
   @Input() nr: number;
   @Input() selectedOp: Operation;
     
-  constructor() {
-    console.log('constructor');
-  }
-
-  ngOnInit() {
-    console.log('on init');
-  }
-
   add(){
     console.log('add click');
     this.selectedCalcList.push({
