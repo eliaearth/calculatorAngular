@@ -1,5 +1,9 @@
 import { Component, OnInit, Input} from '@angular/core';
-import { Operation } from '../Operation';
+
+interface Operation {
+  value: string;
+  name: string;
+};
 
 declare const OPERATIONS;
 
