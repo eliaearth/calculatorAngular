@@ -11,18 +11,16 @@ declare const OPERATIONS;
   selector: 'app-calculator',
   templateUrl: './calculator.component.html',
   styleUrls: ['./calculator.component.css']
-})
-
-
+}) // export must be close to component decorator
 export class CalculatorComponent implements OnInit {
-
-  
+  // order is important, param declaration -> input / output / events and methods
   name: string;
-  @Input() nr: number;
-  result: number = 0;
+  result = 0;
   operations = OPERATIONS;
-  @Input() selectedOp: Operation;
   selectedCalcList = [];
+
+  @Input() nr: number;
+  @Input() selectedOp: Operation;
     
   constructor() {
     console.log('constructor');
